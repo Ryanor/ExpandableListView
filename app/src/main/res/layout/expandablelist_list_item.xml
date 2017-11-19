@@ -13,6 +13,7 @@
         android:paddingRight="?android:attr/expandableListPreferredChildPaddingLeft"
         android:paddingEnd="?android:attr/expandableListPreferredChildPaddingLeft"
         android:text="@string/characterisitic"
+        android:textColor="@color/colorPrimary"
         android:paddingTop="10dp" />
 
     <TextView
@@ -23,7 +24,19 @@
         android:paddingStart="?android:attr/expandableListPreferredChildPaddingLeft"
         android:paddingRight="?android:attr/expandableListPreferredChildPaddingLeft"
         android:paddingEnd="?android:attr/expandableListPreferredChildPaddingLeft"
+        android:textColor="@color/colorPrimary"
         android:hint="@string/uuid" />
+
+    <TextView
+        android:id="@+id/characteristic_properties"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="?android:attr/expandableListPreferredChildPaddingLeft"
+        android:paddingStart="?android:attr/expandableListPreferredChildPaddingLeft"
+        android:paddingRight="?android:attr/expandableListPreferredChildPaddingLeft"
+        android:paddingEnd="?android:attr/expandableListPreferredChildPaddingLeft"
+        android:textColor="@color/colorPrimary"
+        android:hint="@string/properties" />
 
     <TextView
         android:id="@+id/characteristic_value"
@@ -33,16 +46,8 @@
         android:paddingStart="?android:attr/expandableListPreferredChildPaddingLeft"
         android:paddingRight="?android:attr/expandableListPreferredChildPaddingLeft"
         android:paddingEnd="?android:attr/expandableListPreferredChildPaddingLeft"
-        android:hint="@string/value" />
+        android:textColor="@color/colorPrimary"
+        android:hint="@string/value"
+        android:paddingBottom="10dp"/>
 
-    <TextView
-        android:id="@+id/characteristic_descriptor_count"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="?android:attr/expandableListPreferredChildPaddingLeft"
-        android:paddingStart="?android:attr/expandableListPreferredChildPaddingLeft"
-        android:paddingRight="?android:attr/expandableListPreferredChildPaddingLeft"
-        android:paddingEnd="?android:attr/expandableListPreferredChildPaddingLeft"
-        android:hint="@string/descriptor_count"
-        android:paddingBottom="10dp" />
 </LinearLayout>

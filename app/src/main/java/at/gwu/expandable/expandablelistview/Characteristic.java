@@ -1,16 +1,15 @@
 package at.gwu.expandable.expandablelistview;
 
 
-import java.util.List;
-
 public class Characteristic {
 
     private String UUID;
-    private List<Descriptor> descriptorList;
-    private int value;
+    private String[] properties;
+    private String value;
 
-    public Characteristic(String UUID, int value) {
+    public Characteristic(String UUID, String[] properties, String value) {
         this.UUID = UUID;
+        this.properties = properties;
         this.value = value;
     }
 
@@ -18,27 +17,15 @@ public class Characteristic {
         return UUID;
     }
 
-    public void setUUID(String UUID) {
-        this.UUID = UUID;
+    public String getProperties() {
+        String propertiesAsOneString = "";
+        for(String property : properties) {
+            propertiesAsOneString += property + " ";
+        }
+        return propertiesAsOneString;
     }
 
-    public List<Descriptor> getDescriptorList() {
-        return descriptorList;
-    }
-
-    public void setDescriptorList(List<Descriptor> descriptorList) {
-        this.descriptorList = descriptorList;
-    }
-
-    public int getValue() {
+    public String getValue() {
         return value;
-    }
-
-    public void setValue(int value) {
-        this.value = value;
-    }
-
-    public int getAmountOfDescrptors() {
-        return descriptorList.size();
     }
 }

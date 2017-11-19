@@ -14,10 +14,10 @@ public class ExpandableListViewAdapter extends BaseExpandableListAdapter {
 
 
     private Context context;
-    private List<Service> serviceList;
-    private HashMap<Service, List<Characteristic>> characteristicList;
+    private List<String> serviceList;
+    private HashMap<String, List<Characteristic>> characteristicList;
 
-    public ExpandableListViewAdapter(Context context, List<Service> serviceList, HashMap<Service, List<Characteristic>> characteristicList) {
+    public ExpandableListViewAdapter(Context context, List<String> serviceList, HashMap<String, List<Characteristic>> characteristicList) {
         this.context = context;
         this.serviceList = serviceList;
         this.characteristicList = characteristicList;
@@ -67,8 +67,8 @@ public class ExpandableListViewAdapter extends BaseExpandableListAdapter {
         }
 
         TextView serviceUUID = view.findViewById(R.id.service_uuid);
-        Service service = serviceList.get(serviceListPosition);
-        serviceUUID.setText(service.getUUID());
+
+        serviceUUID.setText(serviceList.get(serviceListPosition));
 
         return view;
     }
@@ -83,12 +83,12 @@ public class ExpandableListViewAdapter extends BaseExpandableListAdapter {
         Characteristic characteristic = (Characteristic) getChild(serviceListPosition, characteristicListPosition);
 
         TextView characteristicUUID = view.findViewById(R.id.characteristic_uuid);
+        TextView characteristicProperties = view.findViewById(R.id.characteristic_properties);
         TextView characteristicValue = view.findViewById(R.id.characteristic_value);
-        TextView characteristicDescriptorCount = view.findViewById(R.id.characteristic_descriptor_count);
 
         characteristicUUID.setText(characteristic.getUUID());
+        characteristicProperties.setText(characteristic.getProperties());
         characteristicValue.setText(characteristic.getValue());
-        characteristicDescriptorCount.setText(characteristic.getAmountOfDescrptors());
 
         return view;
     }
