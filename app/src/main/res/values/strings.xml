@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ExpandableListView</string>
+    <string name="service">Service</string>
+    <string name="characterisitic">Characterisitic</string>
+    <string name="uuid">UUID</string>
+    <string name="value">Value</string>
+    <string name="descriptor_count">Descriptor count</string>
+</resources>
