@@ -5,5 +5,5 @@ This example shows how to populate an expandable listview with data from a HTTP 
 
 The data received in this project comes from a nodejs server which can also be [found on my repository](https://github.com/Ryanor/BA2-Server).
 
-<img src="screenshot.png>
+<img src="/screenshot.png">
 
